@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ScrollWatcherAnimation from "../composables/ScrollWatcherAnimation.vue"
+import MainPicture from "../components/sections/MainProfile.astro"
+import Experiencia from "../components/sections/Experiencia.astro"
+import Skills from "../components/sections/Skills.astro";
+import Projects from "../components/sections/Projects.astro";
+
+---
+
+<Layout title="Welcome to Astro." xmlns="">
+	<header class="snap-section">
+		<MainPicture/>
+	</header>
+	<main >
+		<section class="snap-section">
+			<Experiencia/>
+		</section>
+		<section class="snap-section">
+			<Projects/>
+		</section>
+		<section class="snap-section">
+			<Skills/>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main{
+		padding-inline: var(--p-x);
+	}
+	section{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	ul{
+		list-style: disc;
+	}
+	svg{
+		height: 1em;
+	}
+
+</style>
