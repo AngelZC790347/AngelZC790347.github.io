@@ -1,27 +1,26 @@
 ---
-import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue"
+import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue";
 ---
+
 <header>
     <section>
         <ScrollWatcherAnimation client:only="vue" animation="animation-up">
             <h1 class=""><strong>Hi my name is</strong> Angel Zuñiga</h1>
         </ScrollWatcherAnimation>
         <ScrollWatcherAnimation client:only="vue" animation="animation-left">
-            <h4 >Software developer</h4>
+            <h4>Software developer</h4>
         </ScrollWatcherAnimation>
         <a href="#projects"><button>Mira Mis Proyectos 💼</button></a>
     </section>
-    <script type="module">
-    </script>
-    <img src="/retrato.JPG" alt="Angel Zuñiga"/>
+    <script type="module"></script>
+    <img src="/retrato.JPG" alt="Angel Zuñiga" />
 </header>
 
 <style>
-    h1{
+    h1 {
         margin: 0;
-
     }
-    button{
+    button {
         border: 0;
         font-weight: 600;
         color: var(--neutral-dark);
@@ -30,8 +29,8 @@ import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue
         padding: 10px 20px;
         width: fit-content;
     }
-    header{
-        --img-size:450px;
+    header {
+        --img-size: 450px;
         padding-inline: var(--p-x);
         margin: auto;
         display: grid;
@@ -44,7 +43,7 @@ import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue
             align-items: start;
             gap: 100px;
         }
-        img{
+        img {
             height: 50dvh;
             width: 100%;
             border-radius: 50%;
@@ -56,12 +55,13 @@ import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue
             }
         }
     }
-    strong{
+    strong {
         color: var(--primary);
         font-size: 30px;
         font-weight: 100;
+        display: block;
     }
-    h4{
+    h4 {
         color: var(--neutral);
         font-size: var(--size-lg);
         font-weight: bold;
