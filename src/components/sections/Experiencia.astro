@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import CardExperiencia from "../ui/CardExperiencia.astro";
 const experiencias = await getCollection("experiencia");
-console.log(experiencias);
 ---
 
 <div>
@@ -20,7 +19,6 @@ console.log(experiencias);
 
 <style>
     h2 {
-        font-size: var(--size-xl);
         display: flex;
         gap: 1rem;
     }
