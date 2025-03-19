@@ -51,6 +51,11 @@ ul {
     justify-content: end;
     padding-block: 15px;
     gap: 28px;
+    background: transparent;
+
+    @media screen and (max-width: 840px) {
+        background: #242424;
+    }
 }
 
 .social-nav {
@@ -95,6 +100,11 @@ nav {
     position: sticky;
     z-index: 10;
     top: 0;
+    width: 100dvw;
+
+    @media screen and (max-width: 850px) {
+        width: min-content;
+    }
 }
 
 nav.scrolled {
