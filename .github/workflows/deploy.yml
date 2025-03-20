@@ -32,9 +32,9 @@ jobs:
         run: npm run build
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist  # sube el contenido, NO la carpeta dist en sí
+          path: ./dist
 
   deploy:
     needs: build
