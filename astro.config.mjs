@@ -10,5 +10,5 @@ export default defineConfig({
     jsx:true,
     devtools:true
   })],
-  server:''
+  output: 'static'
 });

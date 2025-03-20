@@ -19,7 +19,7 @@ jobs:
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist # Carpeta ya presente en el repo
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
