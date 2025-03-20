@@ -1,3 +1,5 @@
+@import 'primeicons/primeicons.css';
+
 :root {
     --primary: #80D0FF;
     --secondary: #181123;
@@ -18,8 +20,16 @@
     @media screen and (min-width: 800px) {
         --p-x: 20%;
     }
+    --p-chip-background:var(--neutral-dark);
+    --p-chip-border-radius:var(--size-xs);
+    --p-chip-padding-x:var(--size-xs) ;
+    --p-chip-padding-y:0.2rem ;
+    --p-card-border-radius:var(--size-xs);
+    --p-card-shadow: var(--danger-ligth) 0px 0px 0px 2px,var(--danger-ligth) 0px 4px 6px -1px, var(--danger-ligth) 0px 1px 0px inset;
 }
-
+a{
+    text-decoration: none;
+}
 h1 {
     font-size: var(--size-2xl);
     color: var(--primary);
@@ -64,7 +74,7 @@ body::before {
 }
 
 .snap-section {
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
 
 }

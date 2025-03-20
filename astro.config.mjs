@@ -9,5 +9,6 @@ export default defineConfig({
   integrations: [vue({
     jsx:true,
     devtools:true
-  })]
+  })],
+  server:''
 });

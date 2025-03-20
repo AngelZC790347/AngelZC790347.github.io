@@ -1,0 +1,14 @@
+---
+import CardProyecto from './CardProyecto.vue'
+import {CollectionEntry, render} from "astro:content";
+
+interface Props {
+    proyecto:CollectionEntry<'proyectos'>
+}
+const {proyecto} = Astro.props
+const {Content} = await render(proyecto);
+---
+<CardProyecto proyecto={proyecto.data} client:load>
+    <Content/>
+</CardProyecto>
+

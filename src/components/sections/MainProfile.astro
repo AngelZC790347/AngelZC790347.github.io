@@ -10,13 +10,19 @@ import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue
         <ScrollWatcherAnimation client:only="vue" animation="animation-left">
             <h4>Software developer</h4>
         </ScrollWatcherAnimation>
+        <div style="display:flex; gap: 1rem">
         <a href="#projects"><button>Mira Mis Proyectos 💼</button></a>
+        <a href="#projects" ><button style="background: transparent;border: solid 1px var(--danger-ligth);color: white">Descarga CV 🧾</button></a>
+        </div>
     </section>
     <script type="module"></script>
     <img src="/retrato.JPG" alt="Angel Zuñiga" />
 </header>
 
 <style>
+    a,button{
+        cursor: pointer;
+    }
     h1 {
         margin: 0;
     }
