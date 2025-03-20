@@ -5,15 +5,11 @@ import vue from '@astrojs/vue';
 // https://astro.build/config
 export default defineConfig({
   base: '/',
-  outDir: 'dist',
+  site: "https://angelzc790347.github.io/",
   integrations: [vue({
     jsx: true,
     devtools: true
   })],
   output: 'static',
-  build: {
-    rollupOptions: {
-      external: [],
-    },
-  },
+
 });
