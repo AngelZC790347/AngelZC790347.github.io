@@ -25,7 +25,7 @@ const routes = ref([
     <nav class="snap-section" style="min-height: fit-content;">
         <ul class="nav" :style="{ background: colorNav }">
             <li class="menu-md" style="width: 100%;">
-                <Button type="button" @click="toogle" aria-haspopup="true" aria-controls="overlay_menu">
+                <Button type="button" @click="toogle" aria-haspopup="true" aria-controls="overlay_menu" color="white">
                     <svg class="sandwich" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path
@@ -61,7 +61,7 @@ const routes = ref([
             </li>
             </li>
             <li class="menu-lg">
-                <ul>
+                <ul style="display: flex;">
                     <li class="link"><a href="#about">Aboute Me</a></li>
                     <li class="link"><a href="#projects"> My Projects</a></li>
 
@@ -99,6 +99,7 @@ const routes = ref([
 <style scoped>
 ul {
     padding-inline: 20px;
+    list-style: none;
 }
 
 .nav {
@@ -127,12 +128,12 @@ ul {
 }
 
 li {
-    display: inline-flex;
     color: var(--neutral);
     margin-right: 20px;
 }
 
 .link {
+    display: flex;
     align-items: center;
 }
 
