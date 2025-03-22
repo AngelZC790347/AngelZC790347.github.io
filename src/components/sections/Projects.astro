@@ -1,24 +1,28 @@
 ---
-import {getCollection} from "astro:content";
+import { getCollection } from "astro:content";
 import CardProyecto from "../ui/CardProyecto.astro";
 
-const proyectos = await getCollection('proyectos')
+const proyectos = await getCollection("proyectos");
 ---
 
 <div id="projects">
     <h2>Proyectos</h2>
     <ul class="projects">
-    {proyectos.map(proyecto => (
-        <CardProyecto proyecto={proyecto}></CardProyecto>
-    ))}
+        {proyectos.map((proyecto) => <CardProyecto proyecto={proyecto} />)}
     </ul>
 </div>
 <style>
-    .projects{
+    #projects {
+        padding-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .projects {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        grid-template-columns: 1fr 1fr;
         gap: 2rem 3rem;
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 800px) {
             grid-template-columns: 1fr;
         }
         padding-inline: 0;

@@ -8,11 +8,10 @@ const flapskills = new Map(
   Object.values(skills)
     .flatMap(map => [...map])
 );
-console.log(flapskills)
 </script>
 
 <template>
-  <div>
+  <div class="card">
     <Card>
       <template #title><a target="_blank" :href="proyecto.url">
           <h6>{{ proyecto.name }} <span><svg xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +31,7 @@ console.log(flapskills)
         </div>
       </template>
       <template #header>
-        <img :src="proyecto.image" :alt="'imagen ' + proyecto.image" width="100%" height="400px" />
+        <img :src="proyecto.image" :alt="'imagen ' + proyecto.image" width="100%" height="350" />
       </template>
       <template #content>
         <main>
@@ -44,6 +43,85 @@ console.log(flapskills)
 </template>
 
 <style scoped>
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.card {
+  background: #191c29;
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  /*  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);*/
+  background: var(--danger-ligth);
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.card::before {
+  content: "";
+  width: 101%;
+  height: 101%;
+  border-radius: 8px;
+
+  background: var(--danger-ligth);
+  position: absolute;
+  z-index: -1;
+  top: -0.5%;
+  left: -0.5%;
+}
+
+.card:hover {
+  & h6 {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    fill: var(--primary);
+  }
+
+  &::before {
+    background-image: linear-gradient(var(--rotate), var(--primary) 43%, var(--accent)) !important;
+    background: unset;
+    animation: spin 2.5s linear infinite;
+  }
+
+  &::after {
+    background-image: linear-gradient(var(--rotate), var(--primary), var(--accent)) !important;
+    background: unset;
+    animation: spin 2.5s linear infinite;
+  }
+
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}
+
 svg {
   height: 20px;
   width: auto;
@@ -67,11 +145,7 @@ h6 {
     font-size: var(--size-xl);
   }
 
-  &:hover {
-    color: var(--primary);
-    border-bottom: 1px solid var(--primary);
-    fill: var(--primary);
-  }
+
 }
 
 span {
@@ -86,6 +160,7 @@ span {
 }
 
 .p-card {
+  width: 100%;
   overflow: hidden;
 }
 

@@ -24,6 +24,13 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+	body,
+	html {
+		height: 100%;
+		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
+		overflow-y: scroll;
+	}
 	main {
 		padding-inline: var(--p-x);
 	}

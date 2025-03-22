@@ -11,8 +11,13 @@ import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue
             <h4>Software developer</h4>
         </ScrollWatcherAnimation>
         <div style="display:flex; gap: 1rem">
-        <a href="#projects"><button>Mira Mis Proyectos 💼</button></a>
-        <a href="#projects" ><button style="background: transparent;border: solid 1px var(--danger-ligth);color: white">Descarga CV 🧾</button></a>
+            <a href="#projects"><button>Mira Mis Proyectos 💼</button></a>
+            <a href="/cv.pdf"
+                ><button
+                    style="background: transparent;border: solid 1px var(--danger-ligth);color: white"
+                    >Descarga CV 🧾</button
+                ></a
+            >
         </div>
     </section>
     <script type="module"></script>
@@ -20,7 +25,8 @@ import ScrollWatcherAnimation from "../../composables/ScrollWatcherAnimation.vue
 </header>
 
 <style>
-    a,button{
+    a,
+    button {
         cursor: pointer;
     }
     h1 {

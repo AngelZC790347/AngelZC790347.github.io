@@ -1,14 +1,15 @@
 ---
-import CardProyecto from './CardProyecto.vue'
-import {CollectionEntry, render} from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import CardProyecto from "./CardProyecto.vue";
 
 interface Props {
-    proyecto:CollectionEntry<'proyectos'>
+    proyecto: CollectionEntry<"proyectos">;
 }
-const {proyecto} = Astro.props
-const {Content} = await render(proyecto);
+const { proyecto } = Astro.props;
+const { Content } = await render(proyecto);
 ---
-<CardProyecto proyecto={proyecto.data} client:load>
-    <Content/>
-</CardProyecto>
 
+<CardProyecto proyecto={proyecto.data} client:load>
+    <Content />
+</CardProyecto>

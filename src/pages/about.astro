@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import School from "../components/sections/School.astro";
+import Hobbys from "../components/sections/Hobbys.astro";
+---
+
+<Layout title="About Me Angel Zuniga">
+    <section>
+        <header></header>
+        <main>
+            <p>
+                Soy desarrollador de software .Comencé mi camino en el
+                desarrollo enfocado en el frontend, atraído por la creación de
+                interfaces limpias y experiencias fluidas para el usuario. Sin
+                embargo, con el tiempo descubrí que lo que realmente me motiva
+                es construir desde las bases: desarrollar software de sistema,
+                entender cómo se comporta el hardware y programar con una mirada
+                más cercana al corazón de los dispositivos.
+            </p>
+            <p>
+                Me entusiasma especialmente el ecosistema Apple, tanto por su
+                filosofía de diseño como por las herramientas que ofrece.
+                Trabajo con SwiftUI y disfruto escribir código que combine
+                elegancia, eficiencia y control sobre el sistema.
+            </p>
+            <p>
+                Hoy en día, mi foco está en construir soluciones más cercanas al
+                sistema, explorar las capacidades del entorno Apple y compartir
+                este viaje con otros que también buscan entender el software
+                desde su núcleo.
+            </p>
+        </main>
+    </section>
+    <School />
+    <Hobbys />
+</Layout>
+<style>
+    section {
+        text-wrap: pretty;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<style is:global>
+    section {
+        min-height: 40dvh !important;
+        padding: 2rem 5rem;
+    }
+</style>

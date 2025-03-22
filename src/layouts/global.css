@@ -24,7 +24,7 @@
     --p-chip-padding-x:var(--size-xs);
     --p-chip-padding-y:0.2rem;
     --p-card-border-radius:var(--size-xs);
-    --p-card-shadow: var(--danger-ligth) 0px 0px 0px 2px,
+    -p-shadow: var(--danger-ligth) 0px 0px 0px 2px,
     var(--danger-ligth) 0px 4px 6px -1px,
     var(--danger-ligth) 0px 1px 0px inset;
 }
@@ -58,11 +58,7 @@ body {
 
 }
 
-body,
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
+
 
 body::before {
     content: "";
@@ -79,7 +75,6 @@ body::before {
 .snap-section {
     min-height: 100vh;
     scroll-snap-align: start;
-
 }
 
 
