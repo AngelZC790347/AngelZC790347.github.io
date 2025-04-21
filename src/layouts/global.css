@@ -1,127 +1,122 @@
 :root {
-    --primary: #80D0FF;
-    --secondary: #181123;
-    --neutral: #fefefe;
-    --neutral-dark: #414141;
-    --danger: #E65FD7;
-    --accent: #00FFE1;
-    --highlight: #FFD166;
-    --danger-ligth: #f9eafb;
-    --p-x: 10%;
-    --size-xs: clamp(0.5rem, 0.45rem + 0.2vw, 0.7rem);
-    --size-sm: clamp(0.75rem, 0.65rem + 0.3vw, 1rem);
-    --size-md: clamp(1rem, 0.9rem + 0.35vw, 1.25rem);
-    --size-lg: clamp(1.5rem, 1.3rem + 0.4vw, 1.75rem);
-    --size-xl: clamp(2rem, 1.7rem + 0.6vw, 2.5rem);
-    --size-2xl: clamp(3rem, 2.6rem + 1vw, 4rem);
+  --primary: #80d0ff;
+  --secondary: #181123;
+  --neutral: #fefefe;
+  --neutral-dark: #414141;
+  --danger: #e65fd7;
+  --accent: #00ffe1;
+  --highlight: #ffd166;
+  --danger-ligth: #f9eafb;
+  --p-x: 10%;
+  --size-xs: clamp(0.5rem, 0.45rem + 0.2vw, 0.7rem);
+  --size-sm: clamp(0.75rem, 0.65rem + 0.3vw, 1rem);
+  --size-md: clamp(1rem, 0.9rem + 0.35vw, 1.25rem);
+  --size-lg: clamp(1.5rem, 1.3rem + 0.4vw, 1.75rem);
+  --size-xl: clamp(2rem, 1.7rem + 0.6vw, 2.5rem);
+  --size-2xl: clamp(3rem, 2.6rem + 1vw, 4rem);
 
-    @media screen and (min-width: 800px) {
-        --p-x: 20%;
-    }
+  @media screen and (min-width: 800px) {
+    --p-x: 20%;
+    --max-width: 2500px;
+  }
 
-    --p-chip-background:var(--neutral-dark);
-    --p-chip-border-radius:var(--size-xs);
-    --p-chip-padding-x:var(--size-xs);
-    --p-chip-padding-y:0.2rem;
-    --p-card-border-radius:var(--size-xs);
-    -p-shadow: var(--danger-ligth) 0px 0px 0px 2px,
-    var(--danger-ligth) 0px 4px 6px -1px,
-    var(--danger-ligth) 0px 1px 0px inset;
+  --p-chip-background: var(--neutral-dark);
+  --p-chip-border-radius: var(--size-xs);
+  --p-chip-padding-x: var(--size-xs);
+  --p-chip-padding-y: 0.2rem;
+  --p-card-border-radius: var(--size-xs);
+  -p-shadow: var(--danger-ligth) 0px 0px 0px 2px,
+    var(--danger-ligth) 0px 4px 6px -1px, var(--danger-ligth) 0px 1px 0px inset;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-    font-size: var(--size-2xl);
-    color: var(--primary);
+  font-size: var(--size-2xl);
+  color: var(--primary);
 }
 
 h2 {
-    font-size: var(--size-xl);
-    color: var(--danger);
+  font-size: var(--size-xl);
+  color: var(--danger);
 }
 
 h3,
 h4,
 h5,
 h6 {
-    font-size: var(--size-md);
-    font-weight: bold;
+  font-size: var(--size-md);
+  font-weight: bold;
 }
 
 body {
-    margin: 0;
-    background-color: var(--secondary);
-    position: relative;
-
+  margin: 0;
+  background-color: var(--secondary);
+  position: relative;
 }
 
-
-
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("/2iiB.gif");
-    filter: blur(0.4px) opacity(0.5);
-    z-index: -1;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/2iiB.gif");
+  filter: blur(0.4px) opacity(0.5);
+  z-index: -1;
 }
 
 .snap-section {
-    min-height: 100vh;
-    scroll-snap-align: start;
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 
-
-
 * {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: var(--neutral);
-    /*  line-height: 1.5;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--neutral);
+  /*  line-height: 1.5;
     font-weight: 400;*/
 }
 
 /*Animations*/
 
 .animation-appear {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
 }
 
 .animation-up {
-    animation-name: anim-up;
+  animation-name: anim-up;
 }
 
 .animation-left {
-    animation-name: anim-left;
+  animation-name: anim-left;
 }
 
 @keyframes anim-up {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes anim-left {
-    0% {
-        opacity: 0;
-        transform: translate(100px);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

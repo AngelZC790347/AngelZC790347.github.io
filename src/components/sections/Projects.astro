@@ -1,22 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 import CardProyecto from "../ui/CardProyecto.astro";
-
+import Carrousel from "../ui/animated/Carrousel.vue";
 const proyectos = await getCollection("proyectos");
 ---
 
 <div id="projects">
     <h2>Proyectos</h2>
-    <ul class="projects">
+    <ul class="projects">      
         {proyectos.map((proyecto) => <CardProyecto proyecto={proyecto} />)}
     </ul>
 </div>
 <style>
+    h2{        
+    }
     #projects {
-        padding-bottom: 10rem;
+        padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 0rem;
     }
     .projects {
         display: grid;
