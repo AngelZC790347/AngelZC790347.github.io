@@ -1,6 +1,6 @@
 ---
 name: Tetris Game boy
 image: ./tetris.png
-url: "https://github.com/AngelZC790347/tetris-vue.git"
-stack: ['Vue.js','CSS / SasS']
+url: "https://tetris-vue-angel.vercel.app/"
+stack: ["Vue.js", "CSS / SasS"]
 ---
